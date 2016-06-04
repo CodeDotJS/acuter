@@ -94,6 +94,19 @@ acuter.gif('https://twitter.com/.../734001198752544').then(gifLink => {
 });
 ```
 
+✔ <code>Preview __```link```__ of a __```video```__ available on twitter : </code>
+
+__Example :__
+
+```js
+const acuter = require('acuter');
+
+acuter.vidPrev('https://twitter.com/video../738..028').then(gifLink => {
+	console.log(gifLink);
+	// => https://o.twimg.com/../proxy.jpg...SAFSDFUYY
+});
+```
+
 ## Related
 
 - [twiger](https://github.com/CodeDotJS/twiger) : Download media available on twitter with an ease.
