@@ -93,8 +93,26 @@ function gifLink(getURL) {
 	});
 }
 
+function videoPreview(tweetURL) {
+	if (typeof tweetURL !== 'string' && isURL(tweetURL) === false) {
+		return Promise.reject(new Error('url required'));
+	}
+	var url = tweetURL;
+	return got(url).then(function (res) {
+		var $ = cheerio.load(res.body);
+		var getMediaLink = matchRegEx(($('.PlayableMedia-player').attr('style'))) || null;
+		return getMediaLink;
+	}).catch(function (err) {
+		if (err.statusCode === 404) {
+			err.message = 'Link do not contain any video preview';
+		}
+		throw err;
+	});
+}
+
 exports.profile = profileImage;
 exports.cover = coverImage;
 exports.single = singleImage;
 exports.preview = gifPreview;
 exports.gif = gifLink;
+exports.vidPrev = videoPreview;
