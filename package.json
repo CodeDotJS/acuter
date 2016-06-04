@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/CodeDotJS/acuter#readme",
   "devDependencies": {
-  	"ava": "*",
-  	"xo": "*"
+    "ava": "*",
+    "xo": "*"
   }
 }
