@@ -1,0 +1,47 @@
+{
+  "name": "acuter",
+  "version": "1.0.0",
+  "description": "NodeJS API for Twitter media",
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeDotJS/acuter.git"
+  },
+  "keywords": [
+    "twitter",
+    "profile",
+    "cover",
+    "gif",
+    "preview",
+    "url",
+    "extract",
+    "scrap",
+    "download",
+    "find",
+    "images",
+    "pictures",
+    "twigger"
+  ],
+  "dependencies": {
+    "got": "*",
+    "cheerio": "*",
+    "pinkie-promise": "*",
+    "is-url": "*"
+  },
+  "author": "Rishi Giri <rushforlinux@gmail.com> (http://rishigiri.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CodeDotJS/acuter/issues"
+  },
+  "homepage": "https://github.com/CodeDotJS/acuter#readme",
+  "devDependencies": {
+  	"ava": "*",
+  	"xo": "*"
+  }
+}
