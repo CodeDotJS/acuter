@@ -24,6 +24,7 @@ acuter.options('username/links').then(mediaLink => {
 })
 ```
 __Options :__ <br><code>__profile__ &nbsp;:&nbsp; username</code> <br> <code>__cover__ &nbsp;&nbsp;&nbsp;:&nbsp; username</code> <br> <code>__single__ &nbsp;&nbsp;:&nbsp; tweet's link</code> <br> <code>__preview__ &nbsp;:&nbsp; tweet's link</code> <br> <code>__gif__ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; tweet's link</code>
+<br> <code>__vidPrev__ &nbsp;:&nbsp; tweet's link</code>
 
 ## Usage
 

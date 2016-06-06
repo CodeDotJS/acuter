@@ -50,8 +50,7 @@ function singleImage(mediaURL) {
 	if (typeof mediaURL !== 'string' && isURL(mediaURL) === false) {
 		return Promise.reject(new Error('url required'));
 	}
-	var url = mediaURL;
-	return got(url).then(function (res) {
+	return got(mediaURL).then(function (res) {
 		var $ = cheerio.load(res.body);
 		return $('.AdaptiveMedia-singlePhoto .AdaptiveMedia-photoContainer img').attr('src') || null;
 	}).catch(function (err) {
@@ -65,8 +64,7 @@ function gifPreview(getURL) {
 	if (typeof getURL !== 'string' && isURL(getURL) === false) {
 		return Promise.reject(new Error('url required'));
 	}
-	var url = getURL;
-	return got(url).then(function (res) {
+	return got(getURL).then(function (res) {
 		var $ = cheerio.load(res.body);
 		return matchRegEx(($('.PlayableMedia-player').attr('style'))) || null;
 	}).catch(function (err) {
@@ -80,8 +78,7 @@ function gifLink(getURL) {
 	if (typeof getURL !== 'string' && isURL(getURL) === false) {
 		return Promise.reject(new Error('url required'));
 	}
-	var url = getURL;
-	return got(url).then(function (res) {
+	return got(getURL).then(function (res) {
 		var $ = cheerio.load(res.body);
 		var getMediaLink = matchRegEx(($('.PlayableMedia-player').attr('style'))) || null;
 		return convertImageToVideo(getMediaLink);
@@ -97,8 +94,7 @@ function videoPreview(tweetURL) {
 	if (typeof tweetURL !== 'string' && isURL(tweetURL) === false) {
 		return Promise.reject(new Error('url required'));
 	}
-	var url = tweetURL;
-	return got(url).then(function (res) {
+	return got(tweetURL).then(function (res) {
 		var $ = cheerio.load(res.body);
 		var getMediaLink = matchRegEx(($('.PlayableMedia-player').attr('style'))) || null;
 		return getMediaLink;
