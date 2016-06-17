@@ -1,6 +1,6 @@
 {
   "name": "acuter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "NodeJS API for Twitter media",
   "main": "index.js",
   "engines": {
